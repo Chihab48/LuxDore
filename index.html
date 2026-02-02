@@ -49,6 +49,7 @@
             margin: 20px auto;
             background: white;
             border-radius: 15px;
+            gap: 20px;
         }
             
         .app-info-left { display: flex; align-items: center; }
@@ -67,9 +68,30 @@
             border-radius: 8px;
             font-weight: bold;
             transition: 0.3s;
+            text-align: center;
+            white-space: nowrap;
         }
         .install-btn:hover { background-color: #1557b0; }
+         @media (max-width: 600px) {
+    .download-section {
+        flex-direction: column-reverse; /* Button moves to the bottom on mobile */
+        text-align: center;
+    }
 
+    .app-info-left {
+        flex-direction: column-reverse; /* Icon on top of text for better mobile look */
+        gap: 10px;
+    }
+
+    .app-info-left div {
+        margin-left: 0 !important; /* Remove the left margin on mobile */
+    }
+
+    .install-btn {
+        width: 100%; /* Button takes full width on phones */
+        box-sizing: border-box;
+    }
+}
         /* 3. السلايدر (Screenshots) */
         .screenshots-container { max-width: 800px; margin: 40px auto; padding-bottom: 50px; }
         .swiper { width: 100%; padding: 20px 0; }
@@ -142,4 +164,5 @@
         });
     </script>
 </body>
+
 </html>
